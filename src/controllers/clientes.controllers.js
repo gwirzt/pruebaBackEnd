@@ -1,9 +1,13 @@
-import getConnection from '../database/connection'
+import {getConnection} from '../database/connection'
 
-export const getClientes = async (req, res) => {
+const clientesController = {}
+
+clientesController.getClientes = async(req,res)=>{
     console.log('getClientes');
     const pool = await getConnection();
-    const result = await pool.request().query('SELECT top 1 * FROM m_Clientes');
+    const result = await pool.request().query('SELECT 1 AS Prueba');
     console.log(result);
     res.json('Clientes  !!!!!!!')
-};
+}
+
+module.exports = clientesController 

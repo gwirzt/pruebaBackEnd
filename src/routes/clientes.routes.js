@@ -3,7 +3,7 @@ import {getClientes} from '../controllers/clientes.controllers';
 
 
 const router = Router();
-router.get('/clientes',getClientes);
+router.route('/clientes').get(getClientes)
 
 router.post('/clientes', (req, res) => res.send('Clientes  !!!!!!!'));
 

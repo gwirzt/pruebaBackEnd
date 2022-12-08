@@ -6,7 +6,7 @@ const app = express()
 // setting
 //let port;
 
-app.set('port', config.port || 3001);// 3000 is the default port
+app.set('port', process.env.APP_PORT);// 3000 is the default port
 app.use(clientesRoutes);
 
 export default app
