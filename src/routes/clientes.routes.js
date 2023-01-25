@@ -12,9 +12,9 @@ router.post('/clientes', (req, res) => {
     
 });
 
-router.delete('/clientes', (req, res) => res.send('Clientes  !!!!!!!'));
+router.delete('/clientes', (req, res) => res.send('Clientes  desde DELETE!!!!!!!'));
 
-router.put('/clientes', (req, res) => res.send('Clientes  !!!!!!!'));
+router.put('/clientes', (req, res) => res.send('Clientes  desde PUT!!!!!!!'));
 
 
 
