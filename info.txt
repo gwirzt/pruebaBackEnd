@@ -1,0 +1,4 @@
+esta aplicacion esta conectada a la db del linux
+estoy trabajando en ella para aprender
+incluso a utilizar GIT
+
