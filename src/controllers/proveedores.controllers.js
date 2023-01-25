@@ -7,3 +7,5 @@ export const getProveedores = async (req, res) => {
     console.log(result);
     res.json('Provedores  !!!!!!!')
 };
+
+
