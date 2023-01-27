@@ -1,6 +1,6 @@
 import { Router } from "express";
 import {getProveedoresTodos,getProveedoresCuit, getProveedoresNombre} from '../controllers/proveedores.controllers';
-import {validarToken} from '../controllers/token.Controllers';
+import {validarToken} from '../controllers/token.controllers';
 
 
 const router = Router();
