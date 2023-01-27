@@ -1,9 +1,13 @@
 import { Router } from "express";
-import {getProveedores} from '../controllers/proveedores.controllers';
+import {getProveedoresTodos,getProveedoresCuit, getProveedoresNombre} from '../controllers/proveedores.controllers';
+import {validarToken} from '../controllers/token.Controllers';
 
 
 const router = Router();
 
-router.get('/proveedores',getProveedores);
+//quisiera que el midleware se aplique a todas las rutas de este archivo
 
+router.route('/proveedorestodos').get(validarToken, getProveedoresTodos);
+router.route('/proveedorescuit').get(validarToken, getProveedoresCuit);
+router.route('/proveedoresnombre').get(validarToken, getProveedoresNombre);
 export default router;

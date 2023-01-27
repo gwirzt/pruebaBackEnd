@@ -1,7 +1,0 @@
-POST http://localhost:4001/clientes
-Content-Type: application/json
-
-{
-  "nome": "João da Silva",
-  "email": "gwirzt@laputamadre.com"
-}
