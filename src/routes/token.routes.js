@@ -6,6 +6,6 @@ import {getToken} from '../controllers/token.Controllers';
 const router = Router();
 
 
-router.get('/token', getToken);
+router.post('/token', getToken);
 
 export default router;

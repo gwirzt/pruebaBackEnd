@@ -6,11 +6,14 @@ const dbsetting = {
     password: process.env.SQL_PASSWORD,
     server: process.env.SQL_SERVER,
     database: process.env.SQL_DATABASE,
+    
     options: {
         trustServerCertificate: true,
         cryptoCredentialsDetails: {
             minVersion: 'TLSv1'
-        }
+        },
+        encrypt: false,
+        enableArithAbort: false
     },
 };
 

@@ -6,8 +6,12 @@ import { getOrdenesProveedorTodas, getOrdenesProveedorAbiertas,getOrdenesProveed
 const router = Router();
 
 
-router.route('/ordenesprovedor').get(validarToken, getOrdenesProveedorTodas);
-router.route('/ordenesprovedorabiertas').get(validarToken, getOrdenesProveedorAbiertas);
-router.route('/ordenesprovedorcerradas').get(validarToken, getOrdenesProveedorCerradas);
+// router.route('/ordenesprovedor').get(validarToken, getOrdenesProveedorTodas);
+// router.route('/ordenesprovedorabiertas').get(validarToken, getOrdenesProveedorAbiertas);
+// router.route('/ordenesprovedorcerradas').get(validarToken, getOrdenesProveedorCerradas);
+
+router.route('/ordenesprovedor').post(validarToken, getOrdenesProveedorTodas);
+router.route('/ordenesprovedorabiertas').post(validarToken, getOrdenesProveedorAbiertas);
+router.route('/ordenesprovedorcerradas').post(validarToken, getOrdenesProveedorCerradas);
 export default router;
 

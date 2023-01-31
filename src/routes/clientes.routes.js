@@ -4,7 +4,7 @@ import {getClientes} from '../controllers/clientes.controllers';
 
 const router = Router();
 
-router.route('/clientes').get(getClientes)
+router.route('/clientes').post(getClientes)
 
 router.post('/clientes', (req, res) => {
     // quiero imprimir el body
