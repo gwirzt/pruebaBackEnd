@@ -1,8 +1,7 @@
-GET http://localhost:5000/ordenesprovedorcerradas
+POST http://10.1.0.5:5000/ordenesprovedorcerradas
 Content-Type: application/json
-Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjoiTm9tYnJlRGVVc3Vhcm8iLCJpYXQiOjE2NzQ3NzgxMzJ9.zMOe2yxfrDQ1WcnF-a1wow5WgYkPRZlhjZqFnk8JyiY
+Authorization:Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjoiTm9tYnJlRGVVc3Vhcm8iLCJpYXQiOjE2NzQ3NzgxMzJ9.zMOe2yxfrDQ1WcnF-a1wow5WgYkPRZlhjZqFnk8JyiY
     
     {
     "provedor":58
-    
     }
