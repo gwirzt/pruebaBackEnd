@@ -4,36 +4,39 @@ const jwt = require('jsonwebtoken');
 const tokenController = {}
 
 const secret = process.env.CLAVE_SECRETA_TOKKEN;
-const payload = {usuario: 'NombreDeUsuaro',  };
+const payload = { usuario: 'NombreDeUsuaro', };
 
-tokenController.getToken = async(req,res)=>{
-    const token = jwt.sign(payload, secret);
-    res.json(token)
+tokenController.getToken = async (req, res) => {
+  const token = jwt.sign(payload, secret);
+  console.log("entre a getToken");
+  res.json(token)
 }
 
 
-tokenController.validarToken = async(req, res, next) => {
-    //Veo si tiene su token correctamente
-    const authorization = (req.headers.authorization || req.headers.Authorization)
-    const token = authorization.split(' ')[1]
-    if(!token){
-      console.log(`No se encontro token en los headers`)
-      return res
+tokenController.validarToken = async (req, res, next) => {
+  //Veo si tiene su token correctamente
+  console.log(req); //req.headers
+  const authorization = (req.headers.authorization || req.headers.Authorization)
+  const token = authorization.split(' ')[1]
+  if (!token) {
+    console.log(`No se encontro token en los headers`)
+    return res
       .status(401)
       .json({
-        msg:'No hay token',
-        loggedIn: false})
-    }
-    try {
-      jwt.verify(token,process.env.CLAVE_SECRETA_TOKKEN)
-    } catch (error) {
-      console.log(`Error en verify_token: ${error}`)
-      return res
-        .status(401).json({
-        msg:'Algo salio mal',
+        msg: 'No hay token',
         loggedIn: false
       })
-    }
+  }
+  try {
+    jwt.verify(token, process.env.CLAVE_SECRETA_TOKKEN)
+  } catch (error) {
+    console.log(`Error en verify_token: ${error}`)
+    return res
+      .status(401).json({
+        msg: 'Algo salio mal,  token no valido',
+        loggedIn: false
+      })
+  }
   next()
 }
 

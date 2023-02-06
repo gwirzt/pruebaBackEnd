@@ -1,11 +1,11 @@
 import { Router } from "express";
-import {getToken} from '../controllers/token.Controllers';
+import { getToken } from '../controllers/token.Controllers';
 
 
 
 const router = Router();
 
 
-router.post('/token', getToken);
+router.get('/token', getToken);
 
 export default router;

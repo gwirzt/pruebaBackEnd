@@ -1,10 +1,11 @@
 
 
-GET http://localhost:4001/proveedorescuit
+POST  http://localhost:5000/proveedorescuit
 Content-Type: application/json
 Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjoiTm9tYnJlRGVVc3Vhcm8iLCJpYXQiOjE2NzQ3NzgxMzJ9.zMOe2yxfrDQ1WcnF-a1wow5WgYkPRZlhjZqFnk8JyiY
-    
-    {
-    "cuit":"30-71714701-0"
-    }
+#Authorization:Bearer nR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjoiTm9tYnJlRGVVc3Vhcm8iLCJpYXQiOjE2NzQ3NzgxMzJ9.zMOe2yxfrDQ1WcnF-a1wow5WgYkPRZlhjZqFnk8JyiY
+   
+{
+   "cuit":"30-71714701-0"
+}
 
