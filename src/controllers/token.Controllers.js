@@ -17,6 +17,17 @@ tokenController.validarToken = async (req, res, next) => {
   //Veo si tiene su token correctamente
   console.log(req); //req.headers
   const authorization = (req.headers.authorization || req.headers.Authorization)
+  // si no viene el token en los headers
+  if (!authorization) {
+    console.log(`No se encontro token en los headers`)
+
+    return res
+      .status(401)
+      .json({
+        msg: 'No hay token',
+        loggedIn: false
+      })
+  }
   const token = authorization.split(' ')[1]
   if (!token) {
     console.log(`No se encontro token en los headers`)
